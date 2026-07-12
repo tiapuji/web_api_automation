@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
         tags = "@api",
         plugin = {
                 "pretty",
-                "html:build/reports/cucumber/cucumber.html",
+                "html:build/reports/cucumber/api-report.html",
+                "json:build/reports/cucumber/api-report.json",
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
         }
 )
