@@ -36,6 +36,13 @@ jobs:
       - name: Execute Test
         run: ./gradlew clean test --tests "runners.ApiRunner" --tests "runners.WebRunner"
 
+      # check generated reports
+      - name: Check generated reports
+        if: always()
+        run: |
+          echo "===== build/reports ====="
+          find build/reports -type f
+
       # upload report
       - name: Upload Test Report
         if: always()
