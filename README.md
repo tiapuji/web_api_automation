@@ -22,7 +22,13 @@ Framework automation testing menggunakan **Java**, **Selenium WebDriver**, **Res
 │       │   └───stepdefinitions
 │       └───resources
 │           └───features
-└───target
+└── build
+    └── reports
+        └── cucumber
+            ├── api-report.html      ✅
+            ├── api-report.json
+            ├── web-report.html      ✅
+            └── web-report.json
 
 ```
 
@@ -72,25 +78,18 @@ build/reports/tests/test/index.html
 
 ---
 
-## Allure Report
-
-Generate report
-
-```bash
-./gradlew allureReport
-```
-
-Menampilkan report
-
-```bash
-./gradlew allureServe
-```
-
-Lokasi hasil report
+## Report
 
 ```text
-build/reports/allure-report/
-```
+Report yang digunakan yaitu cucumber report. Lokasi hasil report :
+
+└── build
+    └── reports
+        └── cucumber
+            ├── api-report.html   ✅
+            ├── api-report.json
+            ├── web-report.html   ✅
+            └── web-report.json
 
 ---
 
