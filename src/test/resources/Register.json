@@ -1,3 +1,7 @@
 [
-  {"nama" : "Yuta","email" : "yuta110@example.com", "password" : "Muji1234"}
+  {
+    "nama": "Yuta",
+    "email": "{{email}}",
+    "password": "Muji1234"
+  }
 ]

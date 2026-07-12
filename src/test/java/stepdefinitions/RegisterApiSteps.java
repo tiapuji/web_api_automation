@@ -38,9 +38,11 @@ public class RegisterApiSteps {
 
         Map<String, String> data = datas.get(0);
 
+        String email = "yuta" + System.currentTimeMillis() + "@example.com";
+
         JSONObject body = new JSONObject();
         body.put("nama", data.get("nama"));
-        body.put("email", data.get("email"));
+        body.put("email", email);
         body.put("password", data.get("password"));
 
         System.out.println("===== REQUEST BODY =====");
