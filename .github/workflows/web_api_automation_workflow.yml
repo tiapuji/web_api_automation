@@ -36,13 +36,7 @@ jobs:
       - name: Execute Test
         run: ./gradlew clean test --tests "runners.ApiRunner" --tests "runners.WebRunner"
 
-      # generate report
-      - name: Generate Allure Report
-        if: always()
-        run: ./gradlew allureReport
-
       # upload report
-     # upload report
       - name: Upload Test Report
         if: always()
         uses: actions/upload-artifact@v4
