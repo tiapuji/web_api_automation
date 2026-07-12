@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.12.0'
+}
+
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // Selenium
+    implementation 'org.seleniumhq.selenium:selenium-java:4.21.0'
+    testImplementation 'io.github.bonigarcia:webdrivermanager:6.3.2'
+
+    // Cucumber
+    testImplementation 'io.cucumber:cucumber-java:7.18.0'
+    testImplementation 'io.cucumber:cucumber-junit:7.18.0'
+    testImplementation 'junit:junit:4.13.2'
+
+    // Rest Assured
+    testImplementation 'io.rest-assured:rest-assured:5.4.0'
+    testImplementation 'io.rest-assured:json-schema-validator:5.4.0'
+
+    implementation 'org.json:json:20250517'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.20.1'
+
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+
+    testImplementation 'io.qameta.allure:allure-cucumber7-jvm:2.29.1'
+}
+
+allure {
+    version = '2.34.1'
+}
+
+test {
+    useJUnit()
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="68.008" tests="6" skipped="0" failures="0" errors="0">
+<testcase classname="Login" name="Login berhasil" time="13.983">
+<system-out><![CDATA[
+Given pengguna membuka halaman login........................................passed
+When pengguna memasukkan username "tomsmith"................................passed
+And pengguna memasukkan password "SuperSecretPassword!".....................passed
+And pengguna menekan tombol login...........................................passed
+Then login berhasil.........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="Login gagal" time="11.831">
+<system-out><![CDATA[
+Given pengguna membuka halaman login........................................passed
+When pengguna memasukkan username "admin"...................................passed
+And pengguna memasukkan password "12345"....................................passed
+And pengguna menekan tombol login...........................................passed
+Then muncul pesan login gagal...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="Username kosong" time="16.76">
+<system-out><![CDATA[
+Given pengguna membuka halaman login........................................passed
+When pengguna memasukkan username ""........................................passed
+And pengguna memasukkan password "password".................................passed
+And pengguna menekan tombol login...........................................passed
+Then muncul pesan login gagal...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="Username sangat panjang" time="9.772">
+<system-out><![CDATA[
+Given pengguna membuka halaman login........................................passed
+When pengguna memasukkan username "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa".passed
+And pengguna memasukkan password "password".................................passed
+And pengguna menekan tombol login...........................................passed
+Then muncul pesan login gagal...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Register API" name="Register user successfully" time="13.067">
+<system-out><![CDATA[
+Given Register API tersedia.................................................passed
+When User register menggunakan data dari "Register.json"....................passed
+Then Response status code adalah 201........................................passed
+And Response success bernilai true..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Register API" name="Register gagal" time="0.521">
+<system-out><![CDATA[
+Given Register API tersedia.................................................passed
+When User register menggunakan data dari "Registernegative.json"............passed
+Then Response status code error.............................................passed
+And Response success bernilai false.........................................passed
+]]></system-out>
+</testcase>
+</testsuite>
