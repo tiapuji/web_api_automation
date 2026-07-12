@@ -13,7 +13,8 @@ import org.junit.runner.RunWith;
         tags = "@web",
         plugin = {
                 "pretty",
-                "html:build/reports/cucumber/cucumber.html",
+                "html:build/reports/cucumber/web-report.html",
+                "json:build/reports/cucumber/web-report.json",
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
         }
 )
